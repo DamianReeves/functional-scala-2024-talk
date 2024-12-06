@@ -1,0 +1,7 @@
+package build 
+import $packages._
+import mill._, scalalib._
+
+trait DemoModule extends ScalaModule {
+    def scalaVersion = "3.5.2"
+}

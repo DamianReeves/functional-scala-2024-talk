@@ -1,0 +1,11 @@
+package build.examples.bank
+import mill._, scalalib._
+import $ivy.`org.typelevel::scalac-options:0.1.7`
+
+object `package` extends RootModule with build.DemoModule {
+    def ivyDeps = Agg(
+        ivy"io.getkyo::kyo-core::0.15.1"
+    )
+
+    def moduleDeps = Seq(build.kyo.actor)
+}
